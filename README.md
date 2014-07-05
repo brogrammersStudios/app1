@@ -1,8 +1,7 @@
-app1
+APP ONE
 ====
 
-[APP ONE](http://jsonview.com) App1 aka GeoDefense will be a tower defense game.  The details of the game 
-mechanics will be those that were discussed in person.  
+[APP ONE](https://www.facebook.com/groups/707028149358978/) App1 aka GeoDefense will be a tower defense game.  The details of the game mechanics will be those that were discussed in person.  
 
 Reporting Issues
 ----------------
