@@ -9,12 +9,13 @@ import android.media.AudioManager;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.widget.TextView;
+import android.media.SoundPool;
 
 	public class MediaPlayer1 extends Activity
 	{
 		MediaPlayer mediaPlayer;
 
-
+//////////methodsForMusic///////////
 		public void onCreate(Bundle savedInstanceState, String song)
 		{
 			super.onCreate(savedInstanceState); 
@@ -56,5 +57,25 @@ import android.widget.TextView;
 				mediaPlayer.release();
 			}
 		}
-	
+	//////methodForSounds///////
+		public void SoundPool1(String sound)
+		{
+			SoundPool soundPool;
+			int soundHandler = -1;
+			setVolumeControlStream(AudioManager.STREAM_MUSIC);
+			soundPool = new SoundPool(20, AudioManager.STREAM_MUSIC,0);
+			
+			try
+			{
+				AssetManager assetManager = getAssets();
+				AssetFileDescriptor descriptor = assetManager.openFd(sound);
+				soundHandler = soundPool.load(descriptor, 1);
+			}
+			catch(IOException e)
+			{
+				e.printStackTrace();
+			}
+		}
+		
+		
 	}
