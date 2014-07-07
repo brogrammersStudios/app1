@@ -47,4 +47,21 @@ public abstract class AndroidGame extends Activity {
 		wakeLock = pm.newWakeLock(PowerManager.FULL_WAKE_LOCK, "GLGame");
 	}
 	
+	public void onResume(){
+		super.onResume();
+		wakeLock.acquire();
+		screen.resume();
+		renderView.resume();
+	}
+	
+	public void onPause(){
+		super.onPause();
+		wakeLock.release();
+		renderView.pause();
+		screen.pause();
+		
+		if(isFinishing())
+			screen.dispose();
+	}
+	
 }
