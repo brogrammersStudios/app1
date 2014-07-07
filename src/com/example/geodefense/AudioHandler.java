@@ -11,7 +11,7 @@ import android.os.Bundle;
 import android.widget.TextView;
 import android.media.SoundPool;
 
-	public class MediaPlayer1 extends Activity
+	public class AudioHandler extends Activity
 	{
 		MediaPlayer mediaPlayer;
 
