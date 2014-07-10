@@ -47,6 +47,7 @@ public abstract class AndroidGame extends Activity {
 		wakeLock = pm.newWakeLock(PowerManager.FULL_WAKE_LOCK, "GLGame");
 	}
 	
+	@Override
 	public void onResume(){
 		super.onResume();
 		wakeLock.acquire();
@@ -54,6 +55,7 @@ public abstract class AndroidGame extends Activity {
 		renderView.resume();
 	}
 	
+	@Override
 	public void onPause(){
 		super.onPause();
 		wakeLock.release();

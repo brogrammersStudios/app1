@@ -12,6 +12,7 @@ public class MultiTouch  implements OnTouchListener{
 	float[] y = new float[10];
 
 	
+	@Override
 	public boolean onTouch(View v, MotionEvent event){
 		
 		int action = event.getAction() & MotionEvent.ACTION_MASK;

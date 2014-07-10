@@ -8,7 +8,6 @@ import android.graphics.Bitmap.Config;
 import android.graphics.BitmapFactory.Options;
 import android.graphics.Paint.Style;
 
-import com.example.geodefense.Graphics.PixmapFormat;
 import com.example.geodefense.Pixmap;
 
 
@@ -27,6 +26,7 @@ public class AndroidGraphics implements Graphics{
 		this.paint = new Paint();
 	}
 	
+	@Override
 	public Pixmap newPixmap(String fileName, PixmapFormat format){
 		Config config = null;
 		if(format == PixmapFormat.RGB_565)

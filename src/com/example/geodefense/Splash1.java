@@ -12,6 +12,7 @@ import android.view.WindowManager;
 
 import com.example.geodefense.*;
 
+
 public class Splash1 extends Activity{
 
 	@Override
@@ -23,13 +24,14 @@ public class Splash1 extends Activity{
 		setContentView(R.layout.splash1);
 		
 		Thread timer = new Thread(){
+			@Override
 			public void run(){
 				try{
-					sleep(5000);					
+					sleep(4000);					
 				}catch(InterruptedException e){
 					e.printStackTrace();
 				}finally{
-					Intent openStartingPoint = new Intent("com.example.geodefense.Splash2");
+					Intent openStartingPoint = new Intent(Splash1.this, Splash2.class);
 					Splash1.this.startActivity(openStartingPoint);
 				}
 			}
