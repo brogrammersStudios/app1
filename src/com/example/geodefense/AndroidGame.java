@@ -40,7 +40,7 @@ public abstract class AndroidGame extends Activity {
 		fileIO = new AndroidFileIO(getAssets());
 		audio = new AndroidAudio(this);
 		//input = new AndroidInput(this, renderView,scaleX,scaleY);
-		screen = getStartScreen();
+		//screen = getStartScreen();
 		setContentView(renderView);
 		
 		PowerManager pm = (PowerManager) getSystemService(Context.POWER_SERVICE);
