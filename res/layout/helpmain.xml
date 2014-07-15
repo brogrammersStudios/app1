@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/RelativeLayout1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/helpmain" >
+
+    <Button
+        android:id="@+id/objectivehelp"
+        android:layout_width="105dp"
+        android:layout_height="61dp"
+        android:layout_alignBaseline="@+id/enemieshelp"
+        android:layout_alignBottom="@+id/enemieshelp"
+        android:layout_marginLeft="20dp"
+        android:layout_toRightOf="@+id/enemieshelp"
+        android:onClick="objectiveHelp"
+        android:text="" />
+
+    <Button
+        android:id="@+id/backbutton"
+        android:layout_width="105dp"
+        android:layout_height="60dp"
+        android:layout_alignLeft="@+id/towershelp"
+        android:layout_below="@+id/basehelp"
+        android:layout_marginTop="11dp"
+        android:onClick="backButton"
+        android:text="" />
+
+    <Button
+        android:id="@+id/basehelp"
+        android:layout_width="105dp"
+        android:layout_height="60dp"
+        android:layout_alignBaseline="@+id/towershelp"
+        android:layout_alignBottom="@+id/towershelp"
+        android:layout_marginLeft="20dp"
+        android:layout_toRightOf="@+id/towershelp"
+        android:onClick="baseHelp" />
+
+    <Button
+        android:id="@+id/enemieshelp"
+        android:layout_width="105dp"
+        android:layout_height="60dp"
+        android:layout_alignBaseline="@+id/basehelp"
+        android:layout_alignBottom="@+id/basehelp"
+        android:layout_marginLeft="18dp"
+        android:layout_toRightOf="@+id/basehelp"
+        android:onClick="enemiesHelp" />
+
+    <Button
+        android:id="@+id/towershelp"
+        android:layout_width="105dp"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginBottom="87dp"
+        android:layout_marginLeft="18dp"
+        android:onClick="towersHelp" />
+
+</RelativeLayout>

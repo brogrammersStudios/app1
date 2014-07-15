@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/RelativeLayout1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/settingmenu"
+    android:orientation="horizontal" >
+
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="103dp"
+        android:layout_height="59dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="7dp"
+        android:layout_marginBottom="5dp"
+        android:onClick="backButton"
+        android:text="" />
+
+    <Button
+        android:id="@+id/button1"
+        android:layout_width="102dp"
+        android:layout_height="59dp"
+        android:layout_above="@+id/button3"
+        android:layout_marginLeft="31dp"
+        android:layout_marginBottom="10dp"
+        android:layout_toRightOf="@+id/button3"
+        android:onClick="muteButton"
+        android:text="" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="102dp"
+        android:layout_height="59dp"
+        android:layout_alignBaseline="@+id/button1"
+        android:layout_alignBottom="@+id/button1"
+        android:layout_marginLeft="48dp"
+        android:layout_marginBottom="10dp"
+        android:layout_toRightOf="@+id/button1"
+        android:text="" />
+
+</RelativeLayout>

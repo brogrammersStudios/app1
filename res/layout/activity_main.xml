@@ -17,6 +17,7 @@
         android:layout_height="60dp"
         android:layout_marginTop="183dp"
         android:layout_marginLeft="60dp"
+        android:onClick="settingsButton"
         android:text="" />
     <Button
         android:id="@+id/buttonexecute"
@@ -24,6 +25,7 @@
         android:layout_height="60dp"
         android:layout_marginTop="183dp"
         android:layout_marginLeft="38dp"
+        android:onClick="startButton"
         android:text="" />
     <Button
         android:id="@+id/buttonhelp"
@@ -31,6 +33,7 @@
         android:layout_height="60dp"
         android:layout_marginTop="183dp"
         android:layout_marginLeft="46dp"
+        android:onClick="helpButton"
         android:text="" />
 
 </LinearLayout>

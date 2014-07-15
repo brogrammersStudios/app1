@@ -1,24 +1,22 @@
 package com.example.geodefense;
 
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.os.PowerManager;
-import android.os.Vibrator;
 import android.os.PowerManager.WakeLock;
 import android.app.Activity;
 import android.content.Context;
+import android.content.Intent;
 import android.view.Menu;
-import android.view.SurfaceView;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
-import android.view.View.OnClickListener;
-import android.widget.Button;
-import android.widget.ImageView;
+
 
 public class MainActivity extends Activity {
 
 	WakeLock wakeLock;
-	
+	public static MediaPlayer mp;
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -35,38 +33,35 @@ public class MainActivity extends Activity {
 		PowerManager powerManager = (PowerManager)getBaseContext().getSystemService(Context.POWER_SERVICE);
 		wakeLock = powerManager.newWakeLock(PowerManager.FULL_WAKE_LOCK, "My Lock");
 		
-		//Creates Help Button
-        Button hb = (Button)findViewById(R.id.buttonhelp);
-        hb.setOnClickListener(new OnClickListener() {
-        public void onClick(View v) {
-         
-        }
-        });
-        
-      //Creates Settings Button
-        Button sb = (Button)findViewById(R.id.buttonsettings);
-        hb.setOnClickListener(new OnClickListener() {
-        public void onClick(View v) {
-         
-        }
-        });
-        
-      //Creates Execute Button
-        Button eb = (Button)findViewById(R.id.buttonexecute);
-        hb.setOnClickListener(new OnClickListener() {
-        public void onClick(View v) {
-         
-        }
-        });
+		//uses MediaPlayer to start menu music
+		mp = MediaPlayer.create(MainActivity.this, R.raw.menumusic);
+		mp.start();
         
     }	
 	
+	public void helpButton(View view){
+    	Intent intent = new Intent(this, HelpMenu.class);
+    	startActivity(intent);
+    }
+	
+	public void settingsButton(View view){
+		Intent intent = new Intent(this, SettingsMenu.class);
+    	startActivity(intent);
+	}
+	
+	public void startButton(View view){
+		mp.release();
+		mp.reset();
+		
+	}
 	
 
 	@Override
 	protected void onPause() {
 		// TODO Auto-generated method stub
 		wakeLock.release();
+		mp.stop();
+		mp.reset();
 		super.onPause();
 	}
 
@@ -75,9 +70,24 @@ public class MainActivity extends Activity {
 		// TODO Auto-generated method stub
 		wakeLock.acquire();
 		super.onResume();
+		
+		mp.reset();
+		//uses MediaPlayer to start menu music
+		mp = MediaPlayer.create(MainActivity.this, R.raw.menumusic);
+		
+		if(!SettingsMenu.MUTED)
+			mp.start();
 	}
 	
 	
+	
+	@Override
+	protected void onDestroy() {
+		// TODO Auto-generated method stub
+		mp.stop();
+		mp.reset();
+		super.onStop();
+	}
 
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
