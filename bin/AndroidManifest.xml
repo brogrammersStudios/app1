@@ -5,7 +5,7 @@
     android:versionName="1.0" >
 
     <uses-sdk
-        android:minSdkVersion="8"
+        android:minSdkVersion="13"
         android:targetSdkVersion="23" />
     
     
@@ -110,6 +110,17 @@
             android:screenOrientation="landscape" >
             <intent-filter>
                 <action android:name="android.intent.action.SettingsMenu" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        
+        <activity
+            android:name="com.example.geodefense.GameActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="landscape" >
+            <intent-filter>
+                <action android:name="android.intent.action.GameActivity" />
 
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>

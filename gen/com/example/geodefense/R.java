@@ -21,17 +21,33 @@ public final class R {
         public static final int activity_vertical_margin=0x7f050001;
     }
     public static final class drawable {
-        public static final int helpbase=0x7f020000;
-        public static final int helpenemies=0x7f020001;
-        public static final int helpmain=0x7f020002;
-        public static final int helpobjective=0x7f020003;
-        public static final int helptowers=0x7f020004;
-        public static final int ic_launcher=0x7f020005;
-        public static final int icon=0x7f020006;
-        public static final int loadingbackground=0x7f020007;
-        public static final int loadingstudio=0x7f020008;
-        public static final int settingmenu=0x7f020009;
-        public static final int startmenu=0x7f02000a;
+        public static final int base=0x7f020000;
+        public static final int basebullet=0x7f020001;
+        public static final int basewall=0x7f020002;
+        public static final int bulletgeneral=0x7f020003;
+        public static final int clickedmenu=0x7f020004;
+        public static final int enemycircle=0x7f020005;
+        public static final int enemysquare=0x7f020006;
+        public static final int enemytriangle=0x7f020007;
+        public static final int friendlycircle=0x7f020008;
+        public static final int friendlytriangle=0x7f020009;
+        public static final int helpbase=0x7f02000a;
+        public static final int helpenemies=0x7f02000b;
+        public static final int helpmain=0x7f02000c;
+        public static final int helpobjective=0x7f02000d;
+        public static final int helptowers=0x7f02000e;
+        public static final int ic_launcher=0x7f02000f;
+        public static final int icon=0x7f020010;
+        public static final int loadingbackground=0x7f020011;
+        public static final int loadingstudio=0x7f020012;
+        public static final int mapone=0x7f020013;
+        public static final int pausebutton=0x7f020014;
+        public static final int pausescreen=0x7f020015;
+        public static final int settingmenu=0x7f020016;
+        public static final int startmenu=0x7f020017;
+        public static final int towerlist=0x7f020018;
+        public static final int ui=0x7f020019;
+        public static final int unclickedmenu=0x7f02001a;
     }
     public static final class id {
         public static final int LinearLayout1=0x7f090000;

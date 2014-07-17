@@ -50,9 +50,8 @@ public class MainActivity extends Activity {
 	}
 	
 	public void startButton(View view){
-		mp.release();
-		mp.reset();
-		
+		Intent intent = new Intent(this, GameActivity.class);
+    	startActivity(intent);
 	}
 	
 

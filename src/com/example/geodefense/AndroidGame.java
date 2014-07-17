@@ -39,12 +39,16 @@ public abstract class AndroidGame extends Activity {
 		graphics = new AndroidGraphics(getAssets(),frameBuffer);
 		fileIO = new AndroidFileIO(getAssets());
 		audio = new AndroidAudio(this);
-		//input = new AndroidInput(this, renderView,scaleX,scaleY);
-		//screen = getStartScreen();
+		//input = new AndroidInput(this, renderView,scaleX,scaleY);  ACCEL NOT USED IN THIS PROJECT.  DISREGARD FOR THE MOMENT.
+		screen = getStartScreen();
 		setContentView(renderView);
 		
 		PowerManager pm = (PowerManager) getSystemService(Context.POWER_SERVICE);
 		wakeLock = pm.newWakeLock(PowerManager.FULL_WAKE_LOCK, "GLGame");
+	}
+	
+	public Screen getStartScreen(){
+		return screen;
 	}
 	
 	@Override
@@ -65,5 +69,24 @@ public abstract class AndroidGame extends Activity {
 		if(isFinishing())
 			screen.dispose();
 	}
+	
+	public void setScreen(Screen screen){
+		if(screen == null){
+			throw new IllegalArgumentException("Screen must not be null");
+		}
+		
+		this.screen.pause();
+		this.screen.dispose();
+		screen.resume();
+		screen.update(0);
+		this.screen=screen;
+	}
+	
+	
+	//Getters
+	public Graphics getGraphics(){return graphics;}
+	public Audio getAudio(){return audio;}
+	public FileIO getFileIO(){return fileIO;}
+	//public Input getInput(){return input;} Again, no accelerometer used in this project.
 	
 }

@@ -5,12 +5,8 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.Window;
 import android.view.WindowManager;
-
-//import com.mark.pmax.MainActivity;
-//import com.mark.pmax.R;
-//import com.mark.pmax.Splash;
-
-import com.example.geodefense.*;
+import com.example.geodefense.AndroidGraphics;
+import com.example.geodefense.Graphics.PixmapFormat;
 
 
 public class Splash1 extends Activity{
@@ -23,11 +19,12 @@ public class Splash1 extends Activity{
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.splash1);
 		
+				
 		Thread timer = new Thread(){
 			@Override
 			public void run(){
 				try{
-					sleep(4000);					
+					sleep(3000);					
 				}catch(InterruptedException e){
 					e.printStackTrace();
 				}finally{
@@ -45,8 +42,6 @@ public class Splash1 extends Activity{
 		super.onPause();
 		finish();
 	}
-	
-
 	
 	
 	
